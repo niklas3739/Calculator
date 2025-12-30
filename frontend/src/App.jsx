@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:8000";
+//const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:8000";
+const API_BASE = "https://calculator-backend-api-production.up.railway.app"
 
 export default function App() {
   const [a, setA] = useState("0");
