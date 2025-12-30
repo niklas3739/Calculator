@@ -1,0 +1,21 @@
+# Ignore all __pycache__ folders anywhere in the project
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+.venv/
+env/
+bin/
+include/
+lib/
+share/
+pyvenv.cfg
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables (don't commit secrets!)
+.env
