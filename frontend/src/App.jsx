@@ -103,10 +103,10 @@ export default function App() {
         </button>
 
         <div style={{ marginTop: 12 }}>
-          <h3 style={{ marginBottom: 8 }}>Response</h3>
+          <h3 style={{ marginBottom: 8 }}>Result</h3>
 
           {error && (
-            <div
+            <label
               style={{
                 padding: 12,
                 borderRadius: 10,
@@ -115,11 +115,11 @@ export default function App() {
               }}
             >
               <b>Error:</b> {error}
-            </div>
+            </label>
           )}
 
           {result && (
-            <pre
+            <label
               style={{
                 padding: 12,
                 borderRadius: 10,
@@ -128,12 +128,12 @@ export default function App() {
                 overflowX: "auto",
               }}
             >
-              {JSON.stringify(result, null, 2)}
-            </pre>
+              {JSON.stringify(result["result"], null, 2)}
+            </label>
           )}
 
           {!error && !result && (
-            <div style={{ color: "#666" }}>No result yet. Enter numbers and calculate.</div>
+            <label style={{ color: "#666" }}>No result yet. Enter numbers and calculate.</label>
           )}
         </div>
       </div>
