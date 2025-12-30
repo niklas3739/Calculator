@@ -124,7 +124,6 @@ export default function App() {
                 padding: 12,
                 borderRadius: 10,
                 border: "1px solid #ddd",
-                background: "#fafafa",
                 overflowX: "auto",
               }}
             >
