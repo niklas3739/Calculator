@@ -6,7 +6,10 @@ app = FastAPI(title="Calculator API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # or ["*"] for quick testing
+    allow_origins=[
+        "http://localhost:5173",
+        "https://calculator-frontend-production.up.railway.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -15,6 +18,5 @@ app.add_middleware(
 @app.get("/health")
 def health():
     return {"status": "ok"}
-
 
 app.include_router(api_router, prefix="/api")
