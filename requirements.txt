@@ -3,3 +3,4 @@ uvicorn
 pytest
 pytest-cov
 httpx
+h11==0.16.0
