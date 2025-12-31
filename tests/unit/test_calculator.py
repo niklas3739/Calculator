@@ -1,5 +1,5 @@
 import pytest
-from app.services.calculator import add, subtract, multiply, divide
+from app.services.calculator import add, subtract, multiply, divide, modulo
 
 @pytest.mark.parametrize(
     "a,b,expected",
@@ -50,3 +50,19 @@ def test_divide(a, b, expected):
 def test_divide_by_zero_raises():
     with pytest.raises(ZeroDivisionError, match="Cannot divide by zero"):
         divide(1, 0)
+
+
+@pytest.mark.parametrize(
+    "a,b,expected",
+    [
+        (10, 2, 0),
+        (-9, 2, 1),
+        (5, 3, 2),
+    ],
+)
+def test_modulo(a, b, expected):
+    assert modulo(a, b) == expected
+
+def test_divide_by_zero_raises():
+    with pytest.raises(ZeroDivisionError, match="Cannot modulo by zero"):
+        modulo(1, 0)
