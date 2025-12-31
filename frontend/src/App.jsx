@@ -86,6 +86,7 @@ export default function App() {
             <option value="subtract">subtract</option>
             <option value="multiply">multiply</option>
             <option value="divide">divide</option>
+            <option value="modulo">modulo</option>
           </select>
         </label>
 
