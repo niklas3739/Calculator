@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Query
-from app.services.calculator import add, subtract, multiply, divide
+from app.services.calculator import add, subtract, multiply, divide, modulo
 
 router = APIRouter(tags=["calculator"])
 
@@ -22,3 +22,12 @@ def divide_route(a: float = Query(...), b: float = Query(...)):
     except ZeroDivisionError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return {"operation": "divide", "a": a, "b": b, "result": result}
+
+@router.get("/modulo")
+def divide_route(a: float = Query(...), b: float = Query(...)):
+    try:
+        result = modulo(a, b)
+    except ZeroDivisionError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return {"operation": "modulo", "a": a, "b": b, "result": result}
+
