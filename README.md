@@ -5,3 +5,4 @@ The objective of this project is setting up an automated pipeline for testing, b
  * CD/CI using GitHub actions
  * Static and Component Code Analysis using Snyk (https://snyk.io/)
  * Deployment of the product using Railway (https://railway.com/)
+The resulting application can be checked at https://calculator-frontend-production.up.railway.app/
